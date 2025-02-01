@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    background-color: rgb(255, 255, 255);
+    padding: 12px 0;
+    box-shadow: 0px 3px 12px rgba(0,0,0,.3);
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul li a{
+    color: black;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    height: 100%;
+}
+header nav ul li a:hover{
+    background-color: rgb(209, 208, 208);
+}
+.search-icon-box a{
+    padding: 12px 16px;
+    color: black;
+}
+.search-icon-box a:hover{
+    background-color: rgb(255, 73, 73);
+    color: white;
+}
+header nav ul li a i{
+    margin-right: 4px;
+}
+
+

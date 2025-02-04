@@ -1,0 +1,21 @@
+@media (max-width: 584px) {
+    header nav ul li:not(.home){
+        display: none;
+    }
+    .ham-menu{
+        display: block !important;
+        color: rgb(141, 140, 140);
+        width: 100%;
+    }
+    .search-icon{
+        display: none;
+
+    }
+    .nav-top-container{
+        padding: 0;
+    }
+    .nav-container{
+        padding: 0;
+    }
+
+}

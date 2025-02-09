@@ -1,4 +1,4 @@
-@media (max-width: 584px) {
+@media (max-width: 640px) {
     header nav ul li:not(.home){
         display: none;
     }
@@ -16,6 +16,26 @@
     }
     .nav-container{
         padding: 0;
+    }
+    .big-screen{
+        display: none;
+    }
+    .small-screen{
+        display: block !important;
+    }
+    .about-me-description{
+        display: none;
+    }
+    .my-img-container{
+        width: 100% !important;
+    }
+    .work-image-box{
+        grid-template-columns: 1fr;
+        gap: 0;
+        justify-content: center;
+    }
+    .work-image-box img{
+        width: 100%;
     }
 
 }

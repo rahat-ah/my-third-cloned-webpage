@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap"
         rel="stylesheet">
-    <link href="./src/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -22,10 +22,10 @@
     <header>
         <nav>
             <ul>
-                <li class="home"><a href="#">Home</a></li>
-                <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
-                <li><a href="#"><i class="fa fa-th" aria-hidden="true"></i>portfolio</a></li>
-                <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                <li class="home"><a href="#home">Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="#portfolio"><i class="fa fa-th" aria-hidden="true"></i>portfolio</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
             </ul>
             <div class="search-icon-box">
                 <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -33,21 +33,113 @@
             </div>
         </nav>
     </header>
-    <main class="max-w-5xl!">
-       <section class="logo-container">
-           <h1 class="logo">my website logo</h1>
+    <main class="block w-screen bg-amber-900">
+       <section class="logo-container h-screen" id="home">
+           <h1 class="logo">
+                <span class="big-screen">my website logo</span>
+                <span class="small-screen" style="display: none;">my logo</span>
+           </h1>
        </section>
-       <section class="about-container py-8">
-            <h1 class="about-title text-center uppercase text-gray-500 text-2xl p-8 tracking-40px text-4rem">about me</h1>
+        
+       <section class="about-container py-12! px-3! max-w-5xl mx-auto!" id="about">
+            <h1 class="about-title text-center uppercase text-gray-500 text-2xl p-8 tracking-[2px] mb-5!">about me</h1>
             <div class="about-heading">
-                <h3 class="heading-title text-sm text-center text-gray-500 italic uppercase">i love photography</h3>
-                <p class="heading-details text-gray-500 capitalize text-5xl">
+                <h3 class="heading-title text-base text-center text-gray-500 italic capitalize mb-4!">i love photography</h3>
+                <p class="heading-details text-gray-500 capitalize text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque possimus numquam velit, quidem, repellendus beatae harum placeat, officiis dolorum aperiam deleniti. Blanditiis quas, aliquid delectus perferendis rerum doloribus. Harum natus doloribus assumenda minima dolorum necessitatibus incidunt? Minima optio odit totam maxime enim modi nam explicabo laborum alias, neque placeat aliquam maiores dolores in natus quidem saepe veritatis quo quasi distinctio cum. Facere tenetur quod dolorem veritatis eius quis deserunt omnis eum sequi expedita, adipisci laborum reiciendis aliquam aliquid dignissimos id minima illum amet! Illum eligendi quae reiciendis, atque eos eum perferendis, ipsa soluta laboriosam corrupti deserunt unde autem, quod dolorem!
                 </p>
             </div>
+            <div class="about-me mt-12! flex items-center justify-between gap-[2rem]">
+                <div class="my-img-container w-[49.9999%] flex flex-col  items-center justify-between gap-3">
+                    <h3 class="name-title text-center text-base text-gray-500 capitalize font-bold mb-8!">
+                        <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                        my name
+                    </h3>
+                    <img src="image/avatar_hat.jpg" alt="" class="opacity-60 hover:opacity-100">
+                </div>
+                <div class="about-me-description text-gray-500 capitalize text-base  w-[49.9999%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit mollitia atque. Numquam labore dicta natus officiis temporibus eveniet dolores impedit, voluptatum, laborum dolore eum. Voluptatibus repudiandae iusto facere eaque maiores dolorum commodi aperiam reiciendis consequatur? Recusandae incidunt modi accusantium ducimus sed voluptate odio ea cumque ullam iure. Similique aliquid doloremque, suscipit hic molestiae nulla esse possimus sapiente molestias fugit dolorum inventore velit quo unde nobis minima veniam odio sint vero, voluptate praesentium. Totam neque officia architecto sint at. Corrupti quibusdam dolore eligendi fugit architecto laboriosam animi excepturi ut non?</div>
+            </div>
+            <div class="about-skill">
+                <h2 class="skill-title text-center text-lg text-gray-500 mt-12!">Im really good at:</h2>
+                <div class="skill-progress-box">
+                    <div class="photography-box">
+                        <h3 class="photography-title text-base capitalize text-gray-500 mt-5! tracking-[10px]">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            Photography
+                        </h3>
+                        <div class="progress-bar w-full h-[36px] bg-gray-100 mt-5!">
+                            <span class="progress flex w-[90%] h-full bg-neutral-600 text-center text-white items-center justify-center">90%</span>
+                        </div>
+                    </div>
+                    <div class="web-design-box">
+                        <h3 class="web-design-title text-base capitalize text-gray-500 mt-5! tracking-[10px]">
+                            <i class="fa fa-laptop" aria-hidden="true"></i>
+                            Web Design
+                        </h3>
+                        <div class="progress-bar w-full h-[36px] bg-gray-100 mt-5!">
+                            <span class="progress flex w-[85%] h-full bg-neutral-600 text-center text-white items-center justify-center">85%</span>
+                        </div>
+                    </div>
+                    <div class="photoshop-box">
+                        <h3 class="Photoshop-title text-base capitalize text-gray-500 mt-5! tracking-[10px]">
+                            <i class="fa-regular fa-image"></i>
+                            Photoshop
+                        </h3>
+                        <div class="progress-bar w-full h-[36px] bg-gray-100 mt-5!">
+                            <span class="progress flex w-[75%] h-full bg-neutral-600 text-center text-white items-center justify-center">75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
        </section>
-    </main>
-    
+       <section class="achivement-container bg-neutral-600 text-white flex items-center justify-between px-16! py-8! text-center">
+            <div class="partner-box">
+                <h4 class="text-2xl">14+</h4>
+                <p>partners</p>
+            </div>
+            <div class="project-box">
+                <h4 class="text-2xl">55+</h4>
+                <p>Projects Done</p>
+            </div>
+            <div class="clint-box">
+                <h4 class="text-2xl">89+</h4>
+                <p>Happy Clients</p>
+            </div>
+            <div class="meeting-box">
+                <h4 class="text-2xl">140+</h4>
+                <p>Meetings</p>
+            </div>
+       </section>
+       <section class="portfolio">
+            <div class="portfolio-heading-box bg-[url(image/parallax2.jpg)] h-[350px] w-screen bg-center bg-cover bg-fixed z-[50] w-full" id="portfolio">
+                <div class="portfolio-heading h-[350px] flex items-center justify-center">
+                <h1 class="portfolio-title text-4xl uppercase tracking-[10px] text-stone-50">portfolio</h1>
+                </div>
+            </div>
+            <div class="my-work-container px-8! pt-[6rem]! max-w-5xl mx-auto!">
+                <h2 class="work-title text-center text-2xl text-gray-500 uppercase ">my work</h2>
+                <p class="work-heading text-center text-gray-500 my-8!">Here are some of my latest lorem work ipsum tipsum.
+                <br>Click on the images to make them bigger</p>
+                <div class="work-image-box grid! grid-cols-4 gap-4">
+                    <img class="hover:opacity-70" src="image/p1.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p2.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p3.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p4.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p5.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p6.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p7.jpg" alt="">
+                    <img class="hover:opacity-70" src="image/p8.jpg" alt="">
+                </div>
+                <button class="load-btn my-12! bg-gray-200 py-3! px-6! uppercase block mx-auto! hover:bg-gray-400">load more</button>
+            </div>
+       </section>
+       <section class="contact-container">
+            <div class="contact-heading-box bg-[url(image/parallax3.jpg)] h-[350px] w-screen bg-center bg-cover bg-fixed z-[50] w-full opacity-75" id="contact">
+                <div class="portfolio-heading h-[350px] flex items-center justify-center">
+                <h1 class="portfolio-title text-4xl uppercase tracking-[10px] text-stone-50">contact</h1>
+                </div>
+            </div>
+       </section>
     <script src="script/script.js"></script>
 </body>
 

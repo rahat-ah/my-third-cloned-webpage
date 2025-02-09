@@ -37,5 +37,13 @@
     .work-image-box img{
         width: 100%;
     }
-
+    .contact-feedback-box{
+        flex-direction: column !important;
+    }
+    .contact-img-box{
+        width: 100% !important;
+    }
+    .address-feedback-box{
+        width: 100% !important;
+    }
 }
